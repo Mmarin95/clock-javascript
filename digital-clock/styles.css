@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
+:root {
+}
+
+body {
+  background: linear-gradient(to right, rgb(57, 181, 230), skyblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+}
+
+.number {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  /* background-color: white; */
+  margin: 0.5rem;
+}
+
+.stick {
+  --display-stick: block;
+  background-color: black;
+  position: absolute;
+  display: var(--display-stick);
+}
+
+.horizontal-stick {
+  width: 90%;
+  height: 4px;
+  border-radius: 5rem;
+}
+
+.vertical-stick {
+  width: 4px;
+  height: calc(90% / 2);
+  border-radius: 5rem;
+}
+
+.horizontal-stick.stick-1 {
+  display: var(--display-stick);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.horizontal-stick.stick-4 {
+  display: var(--display-stick);
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.horizontal-stick.stick-7 {
+  display: var(--display-stick);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.vertical-stick.stick-2 {
+  display: var(--display-stick);
+  left: 0;
+  top: 0.3rem;
+}
+.vertical-stick.stick-3 {
+  display: var(--display-stick);
+  right: 0;
+  top: 0.3rem;
+}
+.vertical-stick.stick-5 {
+  display: var(--display-stick);
+  left: 0;
+  bottom: 0.3rem;
+}
+.vertical-stick.stick-6 {
+  display: var(--display-stick);
+  right: 0;
+  bottom: 0.3rem;
+}
+
+.number-separator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ball {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0.75rem;
+}
