@@ -8,7 +8,6 @@ const minutesNumberTwo = document.querySelector("[data-minutes-number-2]");
 const secondsNumberOne = document.querySelector("[data-seconds-number-1]");
 const secondsNumberTwo = document.querySelector("[data-seconds-number-2]");
 
-// FIXME: Seconds change slow... too much JS
 function tick() {
   const currentDate = new Date();
   const seconds = stringDate(currentDate.getSeconds().toString());
